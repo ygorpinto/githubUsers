@@ -4,6 +4,7 @@ export default {
         background:"#000000",
         title:"#c5def7",
         text:"#c5def7",
-
+        black:"#000000",
+        white: "#fff",
     }
 };
