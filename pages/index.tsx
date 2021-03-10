@@ -3,18 +3,26 @@ import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import light from '../styles/light'
 import dark from '../styles/dark'
+import Switch from 'react-switch'
 
 export default function Login() {
   const [ session, loading ] = useSession()
   const [theme, setTheme] = useState(light)
 
   const handleTheme = () => {
-    setTheme(theme === light ? dark : light);
+    setTheme(theme.title === 'light' ? dark : light);
   }
 
   return <>
   <div>
-    {/* Aqui entra o switch */}
+    <Switch
+    checked={theme.title === 'dark'}
+    onChange={handleTheme}
+    width={50}
+    height={15}
+    handleDiameter={20}
+    uncheckedHandleIcon={<div>🌘</div>}
+    />
   </div>
   <ThemeProvider theme={theme}>
     {!session && <div className="notSignIn">
