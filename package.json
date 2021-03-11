@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/next-auth": "^3.7.1",
     "@types/node": "^14.14.32",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.1",
