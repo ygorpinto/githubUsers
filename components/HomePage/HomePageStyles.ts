@@ -94,7 +94,14 @@ section {
 
     width:100%;
 
+    h1 {
+
+        margin: 1rem 0;
+
+    }
+
     input {
+        margin: 1rem 0;
         height:2rem;
         width:18rem;
         border-radius:0.3rem;
