@@ -55,6 +55,58 @@ button {
     width:100%;
     background-color:${props=>props.theme.colors.background};
 
+header {
+    
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+
+    .switch {
+        margin-left:2%;
+    }
+
+    .userInfo{
+        font-family: 'Poppins', sans-serif;
+        font-size:0.8rem;
+        width:20%;
+        margin-right:2%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+
+        button {
+            font-family: 'Poppins', sans-serif;
+            border:none;
+            border-radius:0.4rem;
+            background-color:${props=>props.theme.colors.background};
+            box-shadow:2px 2px rgba(0,0,0,0.3);
+        }
+    }
+}
+
+section {
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    input {
+        height:2rem;
+        width:18rem;
+        border-radius:0.3rem;
+        border:none;
+        
+        ::placeholder{
+            text-align:center;
+        }
+    
+    }
+
+}
 
 }
 `
