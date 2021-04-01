@@ -34,7 +34,7 @@ button {
     display:flex;
     align-items:center;
     justify-content:space-around;
-    color:${props=>props.theme.colors.white};
+    color:${props=>props.theme.colors.text};
     background-color:${props=>props.theme.colors.black};
     border-radius:5px;
     font-size:0.8rem;
@@ -57,6 +57,8 @@ button {
 
 header {
     
+    color:${props=>props.theme.colors.text};
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -79,8 +81,13 @@ header {
             font-family: 'Poppins', sans-serif;
             border:none;
             border-radius:0.4rem;
+            color:${props=>props.theme.colors.text};
             background-color:${props=>props.theme.colors.background};
             box-shadow:2px 2px rgba(0,0,0,0.3);
+
+            :hover {
+                opacity:0.6;
+            }
         }
     }
 }
@@ -97,6 +104,7 @@ section {
     h1 {
 
         margin: 1rem 0;
+        color:${props=>props.theme.colors.text};
 
     }
 
