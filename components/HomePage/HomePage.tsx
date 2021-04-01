@@ -2,6 +2,7 @@ import { HomePageStyles } from "./HomePageStyles"
 import Switch from 'react-switch'
 import { signIn, signOut, useSession } from 'next-auth/client'
 import { DefaultTheme } from "styled-components";
+import { useState } from "react";
 
 
 interface HomePageProps {
@@ -11,7 +12,17 @@ interface HomePageProps {
 
 export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
 
+  const [user, setUser] = useState("");
+  const [data, setData] = useState("");
+
   const [session, loading] = useSession();
+
+  const bringaDate = async (e) => {
+    e.preventDefault()
+   const response = await fetch(`https://api.github.com/users/ygorpinto`)
+   const data = await response.json();
+   setData(data)
+  }
 
   return (
     <>
@@ -43,10 +54,17 @@ export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
           </header>
           <section>
             <h1>Github Users</h1>
+            <form onSubmit={bringaDate}>
             <input type="text"
+            onChange={e=>setUser(e.target.value)}
             placeholder="Digite o usuário ou Repo"
             />
+            </form>
           </section>
+          <div className="showData">
+          <h3>{data.name}</h3>
+          <img src={data.avatar_url} />
+          </div>
         </div>
       </HomePageStyles>}
     </>
