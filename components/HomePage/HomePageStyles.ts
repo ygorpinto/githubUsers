@@ -51,11 +51,19 @@ button {
 }
 
 .signIn {
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
     height:100vh;
     width:100%;
     background-color:${props=>props.theme.colors.background};
 
 header {
+
+    width:100%;
     
     color:${props=>props.theme.colors.text};
 
@@ -121,6 +129,24 @@ section {
     
     }
 
+}
+
+.showData {
+
+    font-family: 'Poppins', sans-serif;
+
+    margin:2rem 0 0 0;
+
+    width:20%;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    img {
+        border-radius:50%;
+        height:6rem;
+    }
 }
 
 }

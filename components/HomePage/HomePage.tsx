@@ -19,7 +19,7 @@ export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
 
   const bringaDate = async (e) => {
     e.preventDefault()
-   const response = await fetch(`https://api.github.com/users/ygorpinto`)
+   const response = await fetch(`https://api.github.com/users/${user}`)
    const data = await response.json();
    setData(data)
   }
