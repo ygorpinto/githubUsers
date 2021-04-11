@@ -53,7 +53,7 @@ export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
             </div>
           </header>
           <section>
-            <h1>Github Users</h1>
+            <h1>Github Users.</h1>
             <form onSubmit={bringaDate}>
             <input type="text"
             onChange={e=>setUser(e.target.value)}
