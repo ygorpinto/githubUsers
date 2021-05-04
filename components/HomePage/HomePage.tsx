@@ -13,7 +13,7 @@ interface HomePageProps {
 export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
 
   const [user, setUser] = useState("");
-  const [data, setData] = useState("");
+  const [data, setData] = useState(null);
 
   const [session, loading] = useSession();
 
@@ -62,8 +62,8 @@ export const HomePage = ({ handleTheme, theme }: HomePageProps) => {
             </form>
           </section>
           <div className="showData">
-          <h3>{data.name}</h3>
-          <img src={data.avatar_url} />
+          <h3>{data?.name}</h3>
+          <img src={data?.avatar_url} />
           </div>
         </div>
       </HomePageStyles>}
